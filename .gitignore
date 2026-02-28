@@ -10,6 +10,7 @@ wheels/
 .venv
 
 # Weeks not yet published
+week9/
 week10/
 week11/
 week12/
