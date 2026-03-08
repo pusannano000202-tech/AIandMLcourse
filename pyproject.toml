@@ -8,7 +8,7 @@ dependencies = [
     "tensorflow>=2.15.0",
     "numpy>=1.26.0",
     "matplotlib>=3.8.0",
-    "PySide6>=6.6.0",
+    "reportlab",
     "seaborn>=0.13.2",
     "scipy>=1.16.3",
 ]
