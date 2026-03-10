@@ -3,9 +3,9 @@ Hello World! Environment Check
 ========================================
 Python Version: 3.12.10
 ----------------------------------------
-[NO] numpy: Not installed
-[NO] matplotlib: Not installed
-[NO] tensorflow: Not installed
-[NO] reportlab: Not installed
+[OK] numpy: Installed (Version 2.4.3)
+[OK] matplotlib: Installed (Version 3.10.8)
+[OK] tensorflow: Installed (Version 2.21.0)
+[OK] reportlab: Installed (Version 4.4.10)
 ========================================
 If you see all checkmarks, your environment is ready!
