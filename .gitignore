@@ -1,9 +1,10 @@
-# Python
+# Python-generated files
 __pycache__/
-*.py[cod]
-*.pyo
-*.pyd
-*.so
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
 
 # Virtual environments
 .venv/
@@ -16,6 +17,17 @@ env/
 # VSCode
 .vscode/
 
+# Claude Code local config
+.claude/
+
 # OS
 .DS_Store
 Thumbs.db
+
+# Weeks not yet published
+week9/
+week10/
+week11/
+week12/
+week13/
+week14/

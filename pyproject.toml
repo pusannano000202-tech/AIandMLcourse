@@ -1,0 +1,14 @@
+[project]
+name = "aicoursework"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "tensorflow>=2.15.0",
+    "numpy>=1.26.0",
+    "matplotlib>=3.8.0",
+    "reportlab",
+    "seaborn>=0.13.2",
+    "scipy>=1.16.3",
+]

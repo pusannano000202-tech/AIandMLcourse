@@ -1,0 +1,60 @@
+# github push 조건
+유저가 하라고 할때만 한다.
+주소는 https://github.com/BogKim2/AIandML 여기이다. 
+
+
+
+# Python Plotting Rules
+
+When writing Python code that uses `matplotlib` for plotting, you MUST always include the following robust Korean font selection code to ensure Korean characters are displayed correctly on various systems (Windows, Mac, etc.).
+
+## Korean Font Handling
+
+Always copy and paste this function and call it at the beginning of your script (after imports):
+
+```python
+import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
+
+def set_korean_font():
+    font_list = [f.name for f in fm.fontManager.ttflist]
+    if 'Malgun Gothic' in font_list:
+        plt.rcParams['font.family'] = 'Malgun Gothic'
+    elif 'Gulim' in font_list:
+        plt.rcParams['font.family'] = 'Gulim'
+    elif 'Batang' in font_list:
+        plt.rcParams['font.family'] = 'Batang'
+    elif 'AppleGothic' in font_list:
+        plt.rcParams['font.family'] = 'AppleGothic'
+    plt.rcParams['axes.unicode_minus'] = False
+
+set_korean_font()
+```
+
+Do NOT use simple `plt.rcParams['font.family'] = 'Malgun Gothic'` as it may fail on systems without that specific font.
+
+## Scatter Plot Best Practices
+
+When using `plt.scatter` or `ax.scatter`:
+1. **Unfilled Markers**: If using markers like `'x'`, `'+'`, `'1'`, etc., do **NOT** use the `edgecolors` parameter. Use `c` (color) only.
+   - ❌ Incorrect: `ax.scatter(..., marker='x', edgecolors='black')`
+   - ✅ Correct: `ax.scatter(..., marker='x', c='red')`
+2. **Filled Markers**: For markers like `'o'`, `'s'`, `'^'`, you CAN use `edgecolors` to draw a border.
+   - ✅ Correct: `ax.scatter(..., marker='o', c='red', edgecolors='black')`
+
+## Weight Initialization Best Practices
+
+When implementing Neural Networks from scratch (using NumPy):
+1. **Avoid Large Random Values**: Do NOT use `np.random.randn() * 2` or similar large scaling. This causes gradient exploding/vanishing.
+2. **Use Xavier/Glorot Initialization** for Sigmoid/Tanh:
+   ```python
+   limit = np.sqrt(6 / (n_in + n_out))
+   W = np.random.uniform(-limit, limit, (n_in, n_out))
+   ```
+3. **Use He Initialization** for ReLU:
+   ```python
+   std = np.sqrt(2 / n_in)
+   W = np.random.randn(n_in, n_out) * std
+   ```
+
+
