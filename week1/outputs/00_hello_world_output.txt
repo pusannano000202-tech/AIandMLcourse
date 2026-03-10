@@ -1,0 +1,11 @@
+========================================
+Hello World! Environment Check
+========================================
+Python Version: 3.12.10
+----------------------------------------
+[NO] numpy: Not installed
+[NO] matplotlib: Not installed
+[NO] tensorflow: Not installed
+[NO] reportlab: Not installed
+========================================
+If you see all checkmarks, your environment is ready!
