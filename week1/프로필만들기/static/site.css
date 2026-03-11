@@ -1,0 +1,212 @@
+:root {
+  --navy: #0d2d62;
+  --deep: #081a39;
+  --gold: #b89151;
+  --paper: #f7f8fc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(184, 145, 81, 0.12), transparent 28%),
+    linear-gradient(180deg, #f8f9fc 0%, #eef1f7 100%);
+}
+
+.page-shell {
+  position: relative;
+}
+
+.top-ribbon {
+  background: linear-gradient(90deg, rgba(184, 145, 81, 0.25), rgba(13, 45, 98, 0.04));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero-glow {
+  position: absolute;
+  inset: auto -10% -35% auto;
+  width: 32rem;
+  height: 32rem;
+  background: radial-gradient(circle, rgba(184, 145, 81, 0.2) 0%, rgba(184, 145, 81, 0) 68%);
+  pointer-events: none;
+}
+
+.hero-title {
+  font-family: "Noto Serif KR", serif;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.hero-card,
+.feature-card,
+.panel,
+.contact-band,
+.snapshot-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-card::after,
+.feature-card::after,
+.panel::after {
+  content: "";
+  position: absolute;
+  inset: auto -20% -35% auto;
+  width: 14rem;
+  height: 14rem;
+  background: radial-gradient(circle, rgba(184, 145, 81, 0.12), transparent 70%);
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.35rem;
+  width: 100%;
+  height: 1px;
+  background: rgba(184, 145, 81, 0.85);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 180ms ease;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.08);
+  padding: 1rem 1.1rem;
+}
+
+.info-card .label {
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.64);
+}
+
+.snapshot-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(13, 45, 98, 0.08);
+  background: rgba(255, 255, 255, 0.92);
+  padding: 1.35rem 1.5rem;
+  box-shadow: 0 18px 35px rgba(8, 26, 57, 0.06);
+}
+
+.snapshot-card span {
+  font-size: 0.76rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+.snapshot-card strong {
+  color: var(--navy);
+  font-size: 1.35rem;
+}
+
+.feature-card {
+  border: 1px solid rgba(13, 45, 98, 0.08);
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 2rem;
+  padding: 2rem;
+  box-shadow: 0 24px 50px rgba(8, 26, 57, 0.08);
+}
+
+.panel {
+  border: 1px solid rgba(13, 45, 98, 0.08);
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 2rem;
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(8, 26, 57, 0.07);
+}
+
+.panel-dark {
+  background:
+    linear-gradient(135deg, rgba(8, 26, 57, 0.98), rgba(13, 45, 98, 0.95)),
+    var(--deep);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.metric-card {
+  border-radius: 1.4rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.metric-card span {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.65);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 1rem 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.timeline-dot {
+  width: 0.85rem;
+  height: 0.85rem;
+  margin-top: 0.45rem;
+  border-radius: 999px;
+  background: var(--gold);
+  box-shadow: 0 0 0 8px rgba(184, 145, 81, 0.12);
+}
+
+.contact-band {
+  display: grid;
+  gap: 2rem;
+  border-radius: 2rem;
+  padding: 2.4rem;
+  background:
+    linear-gradient(120deg, rgba(8, 26, 57, 0.98), rgba(13, 45, 98, 0.9)),
+    var(--deep);
+  box-shadow: 0 28px 60px rgba(8, 26, 57, 0.16);
+}
+
+@media (min-width: 960px) {
+  .contact-band {
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-card,
+  .panel,
+  .contact-band {
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+  }
+}

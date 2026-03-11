@@ -23,6 +23,9 @@ env/
 # OS
 .DS_Store
 Thumbs.db
+.tmp/
+server.out.log
+server.err.log
 
 # Weeks not yet published
 week9/
