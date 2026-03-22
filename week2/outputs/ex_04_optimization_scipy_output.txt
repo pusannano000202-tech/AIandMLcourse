@@ -1,11 +1,11 @@
-=== SciPy�� �̿��� ����ȭ (Optimization with SciPy) ===
-���� ��ġ: x = -3.0
+=== SciPy를 이용한 최적화 (Optimization with SciPy) ===
+시작 위치: x = -3.0
 
-[����ȭ ���]
-���� ����: True
-�޽���: Optimization terminated successfully.
-������ x: 2.0000
-�ּҰ� y: 1.0000
-�ݺ� Ƚ��: 3
+[최적화 결과]
+성공 여부: True
+메시지: Optimization terminated successfully.
+최적의 x: 2.0000
+최소값 y: 1.0000
+반복 횟수: 3
 
-�׷����� ����Ǿ����ϴ�: C:\Users\user6\Desktop\ai������������\week2\outputs\ex_04_optimization_scipy.png
+그래프가 저장되었습니다: C:\Users\user6\Desktop\ai수업연습파일\week2\outputs\ex_04_optimization_scipy.png
