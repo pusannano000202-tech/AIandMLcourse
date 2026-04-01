@@ -144,9 +144,9 @@ class Lab1Tab(QWidget):
         epochs = self.epoch_spin.value()
         X = np.array([[0,0],[0,1],[1,0],[1,1]], dtype=float)
         gates = {
-            "AND Gate\n(선형 분리 가능 ✓)": np.array([0,0,0,1]),
-            "OR Gate\n(선형 분리 가능 ✓)":  np.array([0,1,1,1]),
-            "XOR Gate\n(선형 분리 불가능 ✗)": np.array([0,1,1,0]),
+            "AND Gate\n(선형 분리 가능 [O])": np.array([0,0,0,1]),
+            "OR Gate\n(선형 분리 가능 [O])":  np.array([0,1,1,1]),
+            "XOR Gate\n(선형 분리 불가능 [X])": np.array([0,1,1,0]),
         }
 
         self.fig.clear()
@@ -430,7 +430,7 @@ class Lab3Tab(QWidget):
             fs = 10 if line.startswith("▶") or line.startswith("Forward") else 9
             fw = "bold" if line.startswith("▶") or line.startswith("Forward") else "normal"
             ax.text(0.02, y_pos, line, transform=ax.transAxes,
-                    fontsize=fs, fontweight=fw, family="monospace")
+                    fontsize=fs, fontweight=fw)
             y_pos -= 0.075
 
         self.fig.tight_layout()
